@@ -129,14 +129,11 @@
             <level value="DEBUG"/>
             <appender-ref ref="SELFFILE" />
         </logger>
-        <logger name="com.sharing.service.OrderMasterService">
-            <level value="DEBUG"/>
-            <appender-ref ref="SELFFILE" />
-        </logger>
-        <logger name="com.sharing.service.ActivityInfoService">
-            <level value="DEBUG"/>
-            <appender-ref ref="SELFFILE" />
-        </logger>
+
+<!--        <logger name="com.sharing.service.ActivityInfoService">-->
+<!--            <level value="DEBUG"/>-->
+<!--            <appender-ref ref="SELFFILE" />-->
+<!--        </logger>-->
     </springProfile>
 
 
