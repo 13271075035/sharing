@@ -26,4 +26,4 @@ logging:
   level:
     org.springframework: info
 #前端domain
-frontEnd.domain: tomo.opg.cn
+frontEnd.domain: 127.0.0.1
