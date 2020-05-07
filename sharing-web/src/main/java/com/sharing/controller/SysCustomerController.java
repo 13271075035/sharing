@@ -4,19 +4,21 @@ import com.sharing.common.entity.WebResult;
 import com.sharing.dto.SysCustomerDto;
 import com.sharing.service.SysCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
+@RequestMapping("sys/sysCustomer")
 public class SysCustomerController {
 
     @Autowired
     SysCustomerService sysCustomerService;
-    public WebResult login(){
+    @PostMapping("login")
+    public WebResult login(@RequestBody SysCustomerDto sysCustomerDto, HttpServletResponse response){
 
-        SysCustomerDto sysCustomerDto = sysCustomerService.get((long) 1);
-        System.out.println(sysCustomerDto);
-        return  null;
+     
+        return sysCustomerService.login(sysCustomerDto,response);
 
 
     }
