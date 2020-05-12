@@ -14,7 +14,7 @@ public class SysCustomerController {
 
     @Autowired
     SysCustomerService sysCustomerService;
-    @PostMapping("login")
+    @PostMapping("/login")
     public WebResult login(@RequestBody SysCustomerDto sysCustomerDto, HttpServletResponse response){
 
      

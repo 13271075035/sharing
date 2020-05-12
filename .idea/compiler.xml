@@ -6,19 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sharing-web" />
-        <module name="sharing-dao" />
-        <module name="sharing-common" />
         <module name="sharing-biz" />
+        <module name="sharing-common" />
+        <module name="sharing-dao" />
+        <module name="sharing-web" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="sharing-biz" options="-parameters" />
-      <module name="sharing-common" options="-parameters" />
-      <module name="sharing-dao" options="-parameters" />
-      <module name="sharing-web" options="-parameters" />
+      <module name="sharing-biz" options="" />
+      <module name="sharing-common" options="" />
+      <module name="sharing-dao" options="" />
+      <module name="sharing-web" options="" />
     </option>
   </component>
 </project>
