@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysUserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysUser">
+        <id column="sys_userId" property="sysUserid" />
+        <result column="sys_userName" property="sysUsername" />
+        <result column="sys_userImg" property="sysUserimg" />
+        <result column="sys_userPhone" property="sysUserphone" />
+        <result column="sys_userEmail" property="sysUseremail" />
+        <result column="sys_userBalance" property="sysUserbalance" />
+        <result column="spareFirst" property="spareFirst" />
+        <result column="spareTwo" property="spareTwo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_userId, sys_userName, sys_userImg, sys_userPhone, sys_userEmail, sys_userBalance, spareFirst, spareTwo
+    </sql>
+
+</mapper>

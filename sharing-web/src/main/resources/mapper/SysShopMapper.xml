@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysShopDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysShop">
+        <id column="sys_shopId" property="sysShopid" />
+        <result column="sys_shopName" property="sysShopname" />
+        <result column="sys_coordinateX" property="sysCoordinatex" />
+        <result column="sys_coordinateY" property="sysCoordinatey" />
+        <result column="sys_businessTime" property="sysBusinesstime" />
+        <result column="sys_business" property="sysBusiness" />
+        <result column="spareFirst" property="spareFirst" />
+        <result column="spareTwo" property="spareTwo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_shopId, sys_shopName, sys_coordinateX, sys_coordinateY, sys_businessTime, sys_business, spareFirst, spareTwo
+    </sql>
+
+</mapper>

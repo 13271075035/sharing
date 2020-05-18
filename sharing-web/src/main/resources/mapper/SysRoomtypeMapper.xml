@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysRoomtypeDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysRoomtype">
+        <id column="sys_roomTypeId" property="sysRoomtypeid" />
+        <result column="sys_roomTypeName" property="sysRoomtypename" />
+        <result column="spareFirst" property="spareFirst" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_roomTypeId, sys_roomTypeName, spareFirst
+    </sql>
+
+</mapper>

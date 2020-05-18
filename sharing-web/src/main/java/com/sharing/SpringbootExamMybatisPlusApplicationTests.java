@@ -16,7 +16,7 @@ public class SpringbootExamMybatisPlusApplicationTests {
 	/**
 	 * 包名
 	 */
-	private static final String PACKAGE_NAME = "com.example";
+	private static final String PACKAGE_NAME = "com.sharing";
 	/**
 	 * 模块名称
 	 */

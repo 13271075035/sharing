@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysRoomDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysRoom">
+        <id column="sys_roomId" property="sysRoomid" />
+        <result column="sys_roomName" property="sysRoomname" />
+        <result column="sys_roomType" property="sysRoomtype" />
+        <result column="sys_WIFI" property="sysWifi" />
+        <result column="sys_USB" property="sysUsb" />
+        <result column="sys_plan" property="sysPlan" />
+        <result column="sys_price" property="sysPrice" />
+        <result column="spareFirst" property="spareFirst" />
+        <result column="spareTwo" property="spareTwo" />
+        <result column="sys_shopId" property="sysShopid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_roomId, sys_roomName, sys_roomType, sys_WIFI, sys_USB, sys_plan, sys_price, spareFirst, spareTwo, sys_shopId
+    </sql>
+
+</mapper>

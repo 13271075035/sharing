@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysRoommakeDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysRoommake">
+        <id column="sys_roomMakeId" property="sysRoommakeid" />
+        <result column="sys_userId" property="sysUserid" />
+        <result column="sys_shopId" property="sysShopid" />
+        <result column="sys_roomId" property="sysRoomid" />
+        <result column="sys_makeDate" property="sysMakedate" />
+        <result column="sys_makeTime" property="sysMaketime" />
+        <result column="sys_useTIme" property="sysUsetime" />
+        <result column="spareFirst" property="spareFirst" />
+        <result column="spareTwo" property="spareTwo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_roomMakeId, sys_userId, sys_shopId, sys_roomId, sys_makeDate, sys_makeTime, sys_useTIme, spareFirst, spareTwo
+    </sql>
+
+</mapper>

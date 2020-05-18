@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description:
  */
 @SpringBootApplication
-
+@MapperScan("com.sharing.dao")
 public class Application {
     private static Logger logger = LoggerFactory.getLogger(Application.class);
 
