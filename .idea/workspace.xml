@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0aeea3b1-424a-4280-abf6-af9aef060a78" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/SysCustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/impl/SysCustomerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysCustomerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysCustomerEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/SpringbootExamMybatisPlusApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/SpringbootExamMybatisPlusApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysCustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharing-web/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sharing-web/target/classes/application-dev.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sharing-web/target/" />
     <ignored path="$PROJECT_DIR$/sharing-common/target/" />
@@ -26,46 +29,49 @@
     <session id="1758349203">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.33" value="3" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="5" />
-          <entry key="java" value="93" />
-          <entry key="xml" value="7" />
-          <entry key="yml" value="4" />
+          <entry key="class" value="15" />
+          <entry key="java" value="138" />
+          <entry key="xml" value="10" />
+          <entry key="yml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="93" />
-          <entry key="XML" value="7" />
-          <entry key="YAML" value="4" />
+          <entry key="CLASS" value="15" />
+          <entry key="JAVA" value="138" />
+          <entry key="XML" value="10" />
+          <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3131" />
-          <entry key="xml" value="179" />
-          <entry key="yml" value="19" />
+          <entry key="java" value="5514" />
+          <entry key="xml" value="184" />
+          <entry key="yml" value="265" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3131" />
+          <entry key="JAVA" value="5514" />
           <entry key="SQL" value="14" />
-          <entry key="XML" value="165" />
-          <entry key="YAML" value="19" />
+          <entry key="XML" value="170" />
+          <entry key="YAML" value="265" />
         </counts>
       </usages-collector>
     </session>
@@ -73,10 +79,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttReceiveConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+            <state relative-caret-position="316">
+              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2661#2662#0" expanded="true" />
+                <element signature="e#2703#2704#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomtypeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SendMessageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-28">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,55 +114,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/mapper/SysUserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoommake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="325">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysShop.java">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="214">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2120#2129#0" expanded="true" />
+                <element signature="e#2114#2127#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysUser.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="34" />
+            <state relative-caret-position="171">
+              <caret line="76" column="50" lean-forward="true" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.6/mybatis-plus-extension-3.0.6.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="198">
+              <caret line="303" column="5" lean-forward="true" selection-start-line="303" selection-start-column="5" selection-end-line="303" selection-end-column="5" />
+              <folding>
+                <element signature="e#10848#10849#0" expanded="true" />
+                <element signature="e#10911#10912#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -141,12 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-              <folding>
-                <element signature="e#2808#2809#0" expanded="true" />
-                <element signature="e#2862#2863#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1900">
+              <caret line="94" column="116" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -154,27 +179,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysOrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="500">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>shop</find>
       <find>SysRoommake</find>
+      <find>integration</find>
+      <find>rabb</find>
+      <find>busin</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,8 +211,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysCustomerController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/WebConvertConfig.java" />
         <option value="$PROJECT_DIR$/sharing-web/pom.xml" />
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/SpringbootExamMybatisPlusApplicationTests.java" />
@@ -204,9 +229,34 @@
         <option value="$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoommake.java" />
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomController.java" />
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysOrderController.java" />
-        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java" />
-        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java" />
         <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/MsgProducer.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqExchangeConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/RabbitMqSender.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMEnum.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqEnum.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqSender.java" />
+        <option value="$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/TestUser.java" />
+        <option value="$PROJECT_DIR$/sharing-common/src/main/java/com/sharing/common/utils/SerializeUtil.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/ExampleAmqConfiguration.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/DirectRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/DirectReceiver.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/TopicRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/TopicManReceiver.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/DirectRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicManReceiver.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicTotalReceiver.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttGateway.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttSenderConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttReceiveConfig.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SendMessageController.java" />
+        <option value="$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java" />
       </list>
     </option>
   </component>
@@ -223,10 +273,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1492" />
-    <option name="y" value="11" />
-    <option name="width" value="1598" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1176" />
+    <option name="y" value="290" />
+    <option name="width" value="1600" />
     <option name="height" value="860" />
   </component>
   <component name="ProjectView">
@@ -234,7 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -514,7 +563,10 @@
               <item name="sharing-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitMQ" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sharing" type="b2602c69:ProjectViewProjectNode" />
@@ -523,12 +575,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -539,8 +591,9 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589797411460" />
-    <property name="last_opened_file_path" value="E:/idea/demo" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589967648485" />
+    <property name="last_opened_file_path" value="F:/rabbit/rabbitmq-mqtt-demo" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -606,18 +659,22 @@
       <workItem from="1589333634486" duration="21751000" />
       <workItem from="1589419928393" duration="7008000" />
       <workItem from="1589505836369" duration="9953000" />
-      <workItem from="1589765577725" duration="8266000" />
+      <workItem from="1589765577725" duration="8667000" />
+      <workItem from="1589851324980" duration="21892000" />
+      <workItem from="1589937890064" duration="9019000" />
+      <workItem from="1590024297136" duration="5671000" />
+      <workItem from="1590110381933" duration="9585000" />
+      <workItem from="1590125649611" duration="10568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51815000" />
+    <option name="totallyTimeSpent" value="108951000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
+    <frame x="1592" y="-8" width="1616" height="916" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26542416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27313626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -627,18 +684,18 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3128991" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49807197" visible="true" weight="0.32950193" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39846742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50192803" side_tool="true" weight="0.32950193" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32839838" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4993573" weight="0.32694763" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -652,7 +709,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25578406" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26863754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -663,7 +720,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39846742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -673,7 +730,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32974428" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32822478" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -694,194 +751,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/config/MybatisPlusConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/acpect/LogOperationAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/entity/SysOrder.java" />
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/impl/SysCustomerServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/ISysUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/SysCustomerService.java" />
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/impl/SysUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/WebConvertConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-common/src/main/java/com/sharing/common/exception/ErrorCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-common/src/main/java/com/sharing/common/entity/WebResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="2420" column="20" selection-start-line="2420" selection-start-column="20" selection-end-line="2420" selection-end-column="20" />
-          <folding>
-            <element signature="e#94598#94599#0" expanded="true" />
-            <element signature="e#94636#94637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="242" column="11" selection-start-line="242" selection-start-column="11" selection-end-line="242" selection-end-column="11" />
-          <folding>
-            <element signature="e#8526#8527#0" expanded="true" />
-            <element signature="e#8578#8579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="567" selection-start-line="567" selection-end-line="567" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoomtype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysCustomerDao.java" />
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysCustomerController.java" />
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/ISysOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.1.1/mybatis-plus-extension-3.1.1.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-biz/src/main/java/com/sharing/service/impl/SysOrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/mapper/SysOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/mapper/SysShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysRoomDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysShopDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/dao/SysOrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -924,122 +793,255 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/SpringbootExamMybatisPlusApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/mapper/SysUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomtypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.6/mybatis-plus-extension-3.0.6.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-          <folding>
-            <element signature="e#2437#2438#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="1500">
           <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysOrderController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.6/mybatis-plus-extension-3.0.6.jar!/com/baomidou/mybatisplus/extension/service/IService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="169">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13406">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/javax/inject/Scope.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.0.8.RELEASE/spring-amqp-2.0.8.RELEASE.jar!/org/springframework/amqp/core/BindingBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/MsgProducer.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMEnum" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqExchangeConfig.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitConfig.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/TestUser.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-common/src/main/java/com/sharing/common/utils/SerializeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.8.RELEASE/spring-rabbit-2.0.8.RELEASE.jar!/org/springframework/amqp/rabbit/listener/AbstractMessageListenerContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="219" column="24" selection-start-line="219" selection-start-column="24" selection-end-line="219" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/ExampleAmqConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/FilterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqConfig.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqEnum.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/config/RabbitMqSender.java" />
     <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="480">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/DirectReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/DirectRabbitConfig.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicManReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicTotalReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/TopicRabbitConfig.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttSenderConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/SpringbootExamMybatisPlusApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        <state relative-caret-position="800">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/resources/mapper/SysUserMapper.xml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="152">
+          <caret line="206" column="16" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="16" />
+          <folding>
+            <element signature="e#7783#7784#0" expanded="true" />
+            <element signature="e#7829#7830#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysRoommake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="30" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java">
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+        <state relative-caret-position="1900">
+          <caret line="94" column="116" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoomtypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/RabbitMQ/MqttReceiveConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2703#2704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SendMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysShopController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.0.6/mybatis-plus-extension-3.0.6.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="198">
+          <caret line="303" column="5" lean-forward="true" selection-start-line="303" selection-start-column="5" selection-end-line="303" selection-end-column="5" />
           <folding>
-            <element signature="e#2808#2809#0" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#10848#10849#0" expanded="true" />
+            <element signature="e#10911#10912#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharing-dao/src/main/java/com/sharing/entity/SysShop.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="171">
+          <caret line="76" column="50" lean-forward="true" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharing-web/src/main/java/com/sharing/controller/SysRoommakeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2120#2129#0" expanded="true" />
+            <element signature="e#2114#2127#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,15 +4,10 @@ package com.sharing.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sharing.common.entity.WebResult;
 import com.sharing.entity.SysUser;
-import com.sharing.service.ISysUserService;
 import com.sharing.service.impl.SysUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.stereotype.Controller;
-
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,6 +33,7 @@ public class SysUserController {
         List<SysUser> list = impl.list(query);
 
         if(list.size()>0){
+
             return new WebResult().ok(list.get(0));
         }else{
             return new WebResult().error(500,"用户名或密码错误");

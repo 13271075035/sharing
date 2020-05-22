@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.Console;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -80,12 +81,56 @@ public class SysShopController {
     }
 
     @RequestMapping("/selectShop")
-    public WebResult selectShop(SysShop shop){
+    public WebResult selectShop(@RequestBody  SysShop shop){
         List<SysShop> list =  impl.list();
+        System.out.println(JSON.toJSONString(shop));
+        String[] busin = shop.getSysBusinesstime().split(":");
+        List<SysShop> listshop = new ArrayList<SysShop>();
         for(int i =0;i<list.size();i++){
-            list.get(i).getSysBusinesstime();
+           String[] businesstime =  list.get(i).getSysBusinesstime().split("-");
+           String[] statTime = businesstime[0].split(":");
+           String[] endTIme = businesstime[1].split(":");
+
+
+           boolean bool =  isEffectiveDate(new Date(2020,10,10,Integer.parseInt(busin[0]),Integer.parseInt(busin[1])),
+                    new Date(2020,10,10,Integer.parseInt(statTime[0]),Integer.parseInt(statTime[1])),
+                    new Date(2020,10,10,Integer.parseInt(endTIme[0]),Integer.parseInt(endTIme[1])));
+           if(bool==true){
+               listshop.add(list.get(i));
+           }
         }
-       return new WebResult();
+       return new WebResult().ok(listshop);
+    }
+
+    /**
+     * 判断当前时间是否在[startTime, endTime]区间，注意时间格式要一致
+     *
+     * @param nowTime 当前时间
+     * @param startTime 开始时间
+     * @param endTime 结束时间
+     * @return
+     * @author jqlin
+     */
+    public static boolean isEffectiveDate(Date nowTime, Date startTime, Date endTime) {
+        if (nowTime.getTime() == startTime.getTime()
+                || nowTime.getTime() == endTime.getTime()) {
+            return true;
+        }
+
+        Calendar date = Calendar.getInstance();
+        date.setTime(nowTime);
+
+        Calendar begin = Calendar.getInstance();
+        begin.setTime(startTime);
+
+        Calendar end = Calendar.getInstance();
+        end.setTime(endTime);
+
+        if (date.after(begin) && date.before(end)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
