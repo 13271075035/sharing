@@ -14,11 +14,12 @@
         <result column="spareFirst" property="spareFirst" />
         <result column="spareTwo" property="spareTwo" />
         <result column="sys_shopId" property="sysShopid" />
+        <result column="VR" property="vr" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        sys_roomId, sys_roomName, sys_roomType, sys_WIFI, sys_USB, sys_plan, sys_price, spareFirst, spareTwo, sys_shopId
+        sys_roomId, sys_roomName, sys_roomType, sys_WIFI, sys_USB, sys_plan, sys_price, spareFirst, spareTwo, sys_shopId, VR
     </sql>
 
 </mapper>

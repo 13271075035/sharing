@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysFireDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysFire">
+        <id column="sys_fire" property="sysFire" />
+        <result column="sys_equipment_name" property="sysEquipmentName" />
+        <result column="sys_device_address" property="sysDeviceAddress" />
+        <result column="sys_state" property="sysState" />
+        <result column="spareFirst" property="spareFirst" />
+        <result column="spareTwo" property="spareTwo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        sys_fire, sys_equipment_name, sys_device_address, sys_state, spareFirst, spareTwo
+    </sql>
+
+</mapper>

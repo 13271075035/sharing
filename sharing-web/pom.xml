@@ -12,6 +12,11 @@
     <artifactId>sharing-web</artifactId>
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.0.6</version>
@@ -59,6 +64,8 @@
             <artifactId>janino</artifactId>
             <version>2.6.1</version>
         </dependency>
+
+
 
     </dependencies>
 

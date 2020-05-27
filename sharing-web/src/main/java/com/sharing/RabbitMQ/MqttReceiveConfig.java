@@ -1,5 +1,14 @@
 package com.sharing.RabbitMQ;
 
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.google.gson.Gson;
+import com.sharing.entity.SysFire;
+import com.sharing.entity.SysRoom;
+import com.sharing.service.impl.SysFireServiceImpl;
+import com.sharing.service.impl.SysRoomServiceImpl;
+import com.sharing.util.WebSocketServer;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +27,10 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessagingException;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Configuration
 @IntegrationComponentScan
@@ -45,6 +58,14 @@ public class MqttReceiveConfig {
     @Autowired
     private MqttGateway mqttGateway;
 
+    @Autowired
+    private WebSocketServer socket;
+
+    @Autowired
+    private SysFireServiceImpl impl;
+
+    @Autowired
+    private SysRoomServiceImpl roomImpl;
 
     @Bean
     public MqttConnectOptions getMqttConnectOptions() {
@@ -91,9 +112,55 @@ public class MqttReceiveConfig {
     @ServiceActivator(inputChannel = "mqttInputChannel")
     public MessageHandler handler() {
         return new MessageHandler() {
+            @SneakyThrows
             @Override
             public void handleMessage(Message<?> message) throws MessagingException {
                 log.info("主题：{}，消息接收到的数据：{}", message.getHeaders().get("mqtt_receivedTopic"), message.getPayload());
+                if(message.getPayload().equals("$APP,FIREON*")){
+                    List<SysFire> list = impl.list();
+                    if(list.size()!=0) {
+
+
+                        if (list.get(list.size() - 1).getSysState() == 2) {
+                            QueryWrapper<SysRoom> query = new QueryWrapper<SysRoom>();
+                            query.lambda().eq(SysRoom::getSpareFirst, message.getHeaders().get("mqtt_receivedTopic"));
+                            List<SysRoom> roomList = roomImpl.list(query);
+                            SysFire fire = new SysFire();
+                            fire.setSysDeviceAddress(roomList.get(0).getSysRoomname());
+                            fire.setSysEquipmentName((String) message.getHeaders().get("mqtt_receivedTopic"));
+                            fire.setSysState(0);
+                            impl.save(fire);
+                            Map map = new HashMap();
+                            map.put("type","warning");
+                            map.put("data",JSON.toJSONString(fire));
+                            socket.BroadCastInfo(new Gson().toJson(map));
+
+                        } else if (list.get(list.size() - 1).getSysState() == 1) {
+
+
+                        }
+                    }else{
+                        QueryWrapper<SysRoom> query = new QueryWrapper<SysRoom>();
+                        query.lambda().eq(SysRoom::getSpareFirst, message.getHeaders().get("mqtt_receivedTopic"));
+                        List<SysRoom> roomList = roomImpl.list(query);
+                        SysFire fire = new SysFire();
+                        fire.setSysDeviceAddress(roomList.get(0).getSysRoomname());
+                        fire.setSysEquipmentName((String) message.getHeaders().get("mqtt_receivedTopic"));
+                        fire.setSysState(0);
+                        impl.save(fire);
+                        socket.BroadCastInfo(JSON.toJSONString(fire));
+                    }
+
+                }else if(message.getPayload().equals("$APP,FIREOFF*")){
+                    List<SysFire> list = impl.list();
+                    SysFire fire = new SysFire();
+                    fire.setSysFire(list.get(list.size()-1).getSysFire());
+                    fire.setSysState(2);
+                    impl.updateById(fire);
+                    socket.BroadCastInfo("解除");
+
+                }
+
             }
         };
     }

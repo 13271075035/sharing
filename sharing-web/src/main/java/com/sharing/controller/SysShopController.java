@@ -40,16 +40,17 @@ public class SysShopController {
         QueryWrapper<SysShop> query = new QueryWrapper<SysShop>();
         query.lambda().like(SysShop::getSysShopname,shop.getSysShopname());
         List<SysShop> list = impl.list(query);
+        List<SysShop> zList = new ArrayList<>();
         for(int i = 0;i<list.size();i++){
             String[] splitShop = list.get(i).getSysBusinesstime().split("-");
             String[] splitTimeslot = shop.getSysBusinesstime().split("-");
             boolean bool = isDatesBetween(splitTimeslot[0],splitTimeslot[1],splitShop[0],splitShop[1]);
-            if(bool==false){
-             list.remove(i);
+            if(bool==true){
+             zList.add(list.get(i));
             }
         }
-        System.out.println(JSON.toJSONString(list));
-        return new WebResult().ok(list);
+        System.out.println(JSON.toJSONString(zList));
+        return new WebResult().ok(zList);
     }
     public Date dateParse(String dateString){
         String[] time = dateString.split(":");

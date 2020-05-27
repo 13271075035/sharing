@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author lfh
- * @since 2020-05-14
+ * @since 2020-05-26
  */
 @Service
 public class SysRoomServiceImpl extends ServiceImpl<SysRoomDao, SysRoom> implements ISysRoomService {

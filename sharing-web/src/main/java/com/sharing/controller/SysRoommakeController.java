@@ -124,18 +124,16 @@ public class SysRoommakeController {
                     nextroom.setSpareTwo("1");
                     roomImpl.updateById(nextroom);
                     return new WebResult().ok("已开锁，欢迎光临");
-                }else{
-                    return new WebResult().ok("您还没有预约该房间");
                 }
             }
-
+            return new WebResult().ok("您还没有预约该房间");
         }else if(Integer.parseInt(roomList.get(0).getSpareTwo()) > 0){
             mqttGateway.sendToMqtt("$APP,LOCK*",make.getSpareTwo());
             SysRoom nextroom = new SysRoom();
             nextroom.setSysRoomid(make.getSysRoomid());
             nextroom.setSpareTwo("0");
             roomImpl.updateById(nextroom);
-            return new WebResult().ok("已开锁，感谢光临，再见");
+            return new WebResult().ok("已关锁，感谢光临，再见");
         }
         return new WebResult().error("您还没有预约该房间");
     }
