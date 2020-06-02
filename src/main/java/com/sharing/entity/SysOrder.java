@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author lfh
- * @since 2020-05-26
+ * @since 2020-06-01
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -72,6 +72,8 @@ public class SysOrder extends Model<SysOrder> {
     @TableField("spareTwo")
     private String spareTwo;
 
+    private Integer state;
+
 
     public static final String SYS_ORDERID = "sys_orderId";
 
@@ -96,6 +98,8 @@ public class SysOrder extends Model<SysOrder> {
     public static final String SPAREFIRST = "spareFirst";
 
     public static final String SPARETWO = "spareTwo";
+
+    public static final String STATE = "state";
 
     @Override
     protected Serializable pkVal() {

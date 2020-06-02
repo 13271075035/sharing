@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author lfh
- * @since 2020-05-26
+ * @since 2020-06-01
  */
 public interface ISysRoomtypeService extends IService<SysRoomtype> {
 

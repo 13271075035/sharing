@@ -50,6 +50,8 @@ public class SysShopController {
             }
         }
         System.out.println(JSON.toJSONString(zList));
+        Calendar startDate = Calendar.getInstance();
+        System.out.println(startDate.getTime());
         return new WebResult().ok(zList);
     }
     public Date dateParse(String dateString){

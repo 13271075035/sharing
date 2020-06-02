@@ -16,11 +16,12 @@
         <result column="sys_paymentTime" property="sysPaymenttime" />
         <result column="spareFirst" property="spareFirst" />
         <result column="spareTwo" property="spareTwo" />
+        <result column="state" property="state" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        sys_orderId, sys_userId, sys_shopId, sys_roomId, sys_makeDate, sys_makeTime, sys_useTIme, sys_money, sys_paymentMethod, sys_paymentTime, spareFirst, spareTwo
+        sys_orderId, sys_userId, sys_shopId, sys_roomId, sys_makeDate, sys_makeTime, sys_useTIme, sys_money, sys_paymentMethod, sys_paymentTime, spareFirst, spareTwo, state
     </sql>
 
 </mapper>

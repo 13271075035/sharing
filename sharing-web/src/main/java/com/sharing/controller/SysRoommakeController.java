@@ -5,9 +5,11 @@ import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sharing.RabbitMQ.MqttGateway;
 import com.sharing.common.entity.WebResult;
+import com.sharing.entity.SysOrder;
 import com.sharing.entity.SysRoom;
 import com.sharing.entity.SysRoommake;
 import com.sharing.entity.SysShop;
+import com.sharing.service.impl.SysOrderServiceImpl;
 import com.sharing.service.impl.SysRoomServiceImpl;
 import com.sharing.service.impl.SysRoommakeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,8 @@ public class SysRoommakeController {
     private SysRoommakeServiceImpl impl;
     @Autowired
     private SysRoomServiceImpl roomImpl;
+    @Autowired
+    private SysOrderServiceImpl orderImpl;
 
     @Autowired
     private MqttGateway mqttGateway;
@@ -78,46 +82,53 @@ public class SysRoommakeController {
                 String[] businesstime =  list.get(i).getSysMaketime().split("-");
                 String[] statTime = businesstime[0].split(":");
                 String[] endTIme = businesstime[1].split(":");
+                String[] makedate = list.get(i).getSysMakedate().split("/");
 
-                boolean bool =  isEffectiveDate(new Date(2020,10,10,Integer.parseInt(busin[0]),Integer.parseInt(busin[1])),
-                        new Date(2020,10,10,Integer.parseInt(statTime[0]),Integer.parseInt(statTime[1])),
-                        new Date(2020,10,10,Integer.parseInt(endTIme[0]),Integer.parseInt(endTIme[1])));
+                boolean bool =  isEffectiveDate(
+                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
+                                Integer.parseInt(makedate[2]),Integer.parseInt(busin[0]),Integer.parseInt(busin[1])),
+                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
+                                Integer.parseInt(makedate[2]),Integer.parseInt(statTime[0]),Integer.parseInt(statTime[1])),
+                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
+                                Integer.parseInt(makedate[2]),Integer.parseInt(endTIme[0]),Integer.parseInt(endTIme[1])));
                 if(bool ==true){
                    Roommake = list.get(i);
                     //开锁
                     mqttGateway.sendToMqtt("$APP,UNLOCK*",make.getSpareTwo());
                     String[] maketime = Roommake.getSysMaketime().split("-");
                     String[] endtime = maketime[1].split(":");
+                    String[] starttime = maketime[0].split(":");
 
 
                     /**
                      * 使用还剩五分钟
                      */
-                    Date date =  subtractTime(new Date(2020,10,10,Integer.parseInt(endtime[0]),Integer.parseInt(endtime[1])),300000);
-                    // 时间类
                     Calendar fiveDate = Calendar.getInstance();
-                    //使用结束
-                    fiveDate.set(fiveDate.get(Calendar.YEAR), fiveDate.get(Calendar.MONTH), fiveDate.get(Calendar.DATE),date.getHours() , date.getMinutes(), 0);
+                    Date date =  subtractTime(new Date(Integer.parseInt(makedate[0]),(Integer.parseInt(makedate[1])-1),
+                            Integer.parseInt(makedate[2]),Integer.parseInt(endtime[0]),Integer.parseInt(endtime[1])),300000);
+                    fiveDate.set(date.getYear(), date.getMonth(), date.getDate(),date.getHours() , date.getMinutes(), 0);
                     Timer t = new Timer();
                     t.schedule(new TimerTask() {
                         public void run() {
                             mqttGateway.sendToMqtt("$APP,LASTFIVE*",make.getSpareTwo());
                         }
                     }, fiveDate.getTime());
+                    System.out.println(fiveDate.getTime());
 
 
                     /**
                      * 使用结束
                      */
                     Calendar startDate = Calendar.getInstance();
-                    //使用结束
-                    startDate.set(startDate.get(Calendar.YEAR), startDate.get(Calendar.MONTH), startDate.get(Calendar.DATE),Integer.parseInt(endtime[0]) , Integer.parseInt(endtime[1]), 0);
+
+                    startDate.set(date.getYear(), date.getMonth(), date.getDate(),Integer.parseInt(endtime[0]) , Integer.parseInt(endtime[1]), 0);
                     Timer ti = new Timer();
                     ti.schedule(new TimerTask() {
                         public void run() {
                             mqttGateway.sendToMqtt("$APP,TAKEOVER*",make.getSpareTwo());
                         }
                     }, startDate.getTime() );
+                    System.out.println(startDate.getTime());
                     System.out.println("已开锁，欢迎光临");
                     SysRoom nextroom = new SysRoom();
                     nextroom.setSysRoomid(make.getSysRoomid());
@@ -133,6 +144,10 @@ public class SysRoommakeController {
             nextroom.setSysRoomid(make.getSysRoomid());
             nextroom.setSpareTwo("0");
             roomImpl.updateById(nextroom);
+            SysOrder order = new SysOrder();
+            order.setState(1);
+            order.setSysOrderid(make.getSysRoommakeid());
+            orderImpl.updateById(order);
             return new WebResult().ok("已关锁，感谢光临，再见");
         }
         return new WebResult().error("您还没有预约该房间");

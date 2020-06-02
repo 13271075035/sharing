@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author lfh
- * @since 2020-05-26
+ * @since 2020-06-01
  */
 public interface SysRoomDao extends BaseMapper<SysRoom> {
 

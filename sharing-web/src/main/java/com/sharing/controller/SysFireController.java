@@ -1,19 +1,24 @@
 package com.sharing.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sharing.RabbitMQ.MqttReceiveConfig;
 import com.sharing.common.entity.WebResult;
 import com.sharing.entity.SysFire;
 import com.sharing.entity.SysRoom;
 import com.sharing.service.impl.SysFireServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.MessageHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
 
 /**
  * <p>
@@ -27,9 +32,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/sysFire")
 public class SysFireController {
 
+
+
     @Autowired
     private SysFireServiceImpl impl;
-
+    public HashMap map  = new HashMap();
     @GetMapping("/selectAll")
     private WebResult selectFire(Integer currentPage,Integer myts){
 
@@ -45,5 +52,8 @@ public class SysFireController {
 
         return  new WebResult().ok(impl.page(page,query));
     }
+
+
+
 }
 
