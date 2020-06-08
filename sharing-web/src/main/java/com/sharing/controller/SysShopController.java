@@ -37,9 +37,8 @@ public class SysShopController {
     private SysShopServiceImpl impl;
     @RequestMapping("/mapMake")
     public WebResult mapMake( @RequestBody  SysShop shop){
-        QueryWrapper<SysShop> query = new QueryWrapper<SysShop>();
-        query.lambda().like(SysShop::getSysShopname,shop.getSysShopname());
-        List<SysShop> list = impl.list(query);
+
+        List<SysShop> list = impl.list();
         List<SysShop> zList = new ArrayList<>();
         for(int i = 0;i<list.size();i++){
             String[] splitShop = list.get(i).getSysBusinesstime().split("-");
@@ -135,5 +134,11 @@ public class SysShopController {
             return false;
         }
     }
+
+
+
+
+
+
 }
 
