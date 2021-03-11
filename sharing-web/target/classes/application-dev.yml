@@ -44,9 +44,9 @@ spring:
         min-idle: 5       # 连接池中的最小空闲连接
 
   mqtt:
-    username: wangfeiyong
+    username: hr
     password: 123456
-    url: tcp://118.25.133.57:1883
+    url: tcp://106.14.139.44:1884
     client:
       id: e9eb8a41-0812-4afb-a1f3-366e59c105f5
     default:

@@ -19,4 +19,5 @@
         sys_userId, sys_userName, sys_userImg, sys_userPhone, sys_userEmail, sys_userBalance, spareFirst, spareTwo
     </sql>
 
+
 </mapper>

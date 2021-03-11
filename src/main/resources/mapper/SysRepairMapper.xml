@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysRepairDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysRepair">
+        <id column="rep_id" property="repId" />
+        <result column="rep_room_id" property="repRoomId" />
+        <result column="rep_time" property="repTime" />
+        <result column="rep_statu" property="repStatu" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        rep_id, rep_room_id, rep_time, rep_statu
+    </sql>
+
+</mapper>

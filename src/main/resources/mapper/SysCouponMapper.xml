@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharing.dao.SysCouponDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sharing.entity.SysCoupon">
+        <id column="cou_id" property="couId" />
+        <result column="cou_user_id" property="couUserId" />
+        <result column="cou_money" property="couMoney" />
+        <result column="cou_condition" property="couCondition" />
+        <result column="cou_create_time" property="couCreateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        cou_id, cou_user_id, cou_money, cou_condition, cou_create_time
+    </sql>
+
+</mapper>

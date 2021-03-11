@@ -21,7 +21,7 @@ public class WebResult<T> implements Serializable {
      * 编码：0表示成功，其他值表示失败
      */
     @ApiModelProperty(value = "编码：0表示成功，其他值表示失败")
-    private int code = 0;
+    private int code = 200;
     /**
      * 消息内容
      */

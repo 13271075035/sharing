@@ -49,6 +49,13 @@ public class SysRoommakeController {
         return new WebResult().ok(impl.list(query));
     }
 
+    @RequestMapping("/roomMakeRoomid")
+    public WebResult roomMakeRoomid(@RequestBody SysRoommake room){
+        QueryWrapper<SysRoommake> query = new QueryWrapper<SysRoommake>();
+        query.lambda().eq(SysRoommake::getSysMakedate, room.getSysMakedate()).eq(SysRoommake::getSysRoomid,room.getSysRoomid());
+        return new WebResult().ok(impl.list(query));
+    }
+
     @RequestMapping("/selectRoomMake")
     public WebResult selectRoomMake(@RequestBody SysRoommake room){
         QueryWrapper<SysRoommake> query = new QueryWrapper<SysRoommake>();
@@ -66,6 +73,7 @@ public class SysRoommakeController {
         QueryWrapper<SysRoom> roomQuery = new QueryWrapper<SysRoom>();
         roomQuery.lambda().eq(SysRoom::getSysRoomid, make.getSysRoomid());
         List<SysRoom> roomList =  roomImpl.list(roomQuery);
+        Date now  = new Date();
         if(Integer.parseInt(roomList.get(0).getSpareTwo()) ==0){
             System.out.println("进来了");
 
@@ -85,11 +93,11 @@ public class SysRoommakeController {
                 String[] makedate = list.get(i).getSysMakedate().split("/");
 
                 boolean bool =  isEffectiveDate(
-                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
-                                Integer.parseInt(makedate[2]),Integer.parseInt(busin[0]),Integer.parseInt(busin[1])),
-                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
+                        new Date(now.getYear(),now.getMonth(),
+                                now.getDate(),Integer.parseInt(busin[0]),Integer.parseInt(busin[1]),Integer.parseInt(busin[2])),
+                        new Date(now.getYear(),Integer.parseInt(makedate[1])-1,
                                 Integer.parseInt(makedate[2]),Integer.parseInt(statTime[0]),Integer.parseInt(statTime[1])),
-                        new Date(Integer.parseInt(makedate[0]),Integer.parseInt(makedate[1]),
+                        new Date(now.getYear(),Integer.parseInt(makedate[1])-1,
                                 Integer.parseInt(makedate[2]),Integer.parseInt(endTIme[0]),Integer.parseInt(endTIme[1])));
                 if(bool ==true){
                    Roommake = list.get(i);
@@ -134,11 +142,25 @@ public class SysRoommakeController {
                     nextroom.setSysRoomid(make.getSysRoomid());
                     nextroom.setSpareTwo("1");
                     roomImpl.updateById(nextroom);
-                    return new WebResult().ok("已开锁，欢迎光临");
+                    Date orderTime = new Date(now.getYear(),now.getMonth(),
+                            now.getDate(),Integer.parseInt(busin[0]),Integer.parseInt(busin[1]),Integer.parseInt(busin[2]));
+                    Date endTime = new Date(now.getYear(),Integer.parseInt(makedate[1])-1,
+                            Integer.parseInt(makedate[2]),Integer.parseInt(endTIme[0]),Integer.parseInt(endTIme[1]));
+
+                    Map data = new HashMap();
+                    data.put("message","已开锁，欢迎光临");
+                    data.put("sysRoomname",roomList.get(0).getSysRoomname());
+                    data.put("sysRoomId",roomList.get(0).getSysRoomid());
+                    data.put("sysShopid",roomList.get(0).getSysShopid());
+                    data.put("endTime",endTime);
+                    data.put("orderTime",orderTime);
+                    data.put("useTime",list.get(i).getSysUsetime());
+                    return new WebResult().ok(data);
                 }
             }
             return new WebResult().ok("您还没有预约该房间");
         }else if(Integer.parseInt(roomList.get(0).getSpareTwo()) > 0){
+            System.out.println("--------------");
             mqttGateway.sendToMqtt("$APP,LOCK*",make.getSpareTwo());
             SysRoom nextroom = new SysRoom();
             nextroom.setSysRoomid(make.getSysRoomid());
@@ -159,7 +181,7 @@ public class SysRoommakeController {
      *  加减对应时间后的日期
      * @param date  需要加减时间的日期
      * @param amount    加减的时间(毫秒)
-     * @return  加减对应时间后的日期
+     * @return  加减insertRoomMake对应时间后的日期
      */
     private Date subtractTime(Date date, int amount) {
         try {

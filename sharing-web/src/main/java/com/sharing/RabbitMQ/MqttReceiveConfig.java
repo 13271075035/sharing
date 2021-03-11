@@ -12,6 +12,7 @@ import com.sharing.service.impl.SysRoomServiceImpl;
 import com.sharing.util.WebSocketServer;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -72,6 +73,9 @@ public class MqttReceiveConfig {
     @Autowired
     private SysRoomServiceImpl roomImpl;
 
+    //全局变量
+    public MqttPahoMessageDrivenChannelAdapter adapter;
+
     Map firemap = new HashMap();
     @RequestMapping(value = "/lunxun")
     public WebResult lunxun (){
@@ -109,9 +113,17 @@ public class MqttReceiveConfig {
     //配置client,监听的topic
     @Bean
     public MessageProducer inbound() {
-        MqttPahoMessageDrivenChannelAdapter adapter =
-                new MqttPahoMessageDrivenChannelAdapter(clientId + "_inbound", mqttClientFactory(),
-                        defaultTopic);
+//        MqttPahoMessageDrivenChannelAdapter adapter =
+//                new MqttPahoMessageDrivenChannelAdapter(clientId + "_inbound", mqttClientFactory(),
+//                        defaultTopic);
+
+        // 动态topic
+        List<SysFire> list = impl.list();
+        adapter = new MqttPahoMessageDrivenChannelAdapter(clientId + "_inbound", mqttClientFactory(),"");
+
+        for(SysFire topic:list){
+                adapter.addTopic(topic.getSysEquipmentName(),1);
+        }
         adapter.setCompletionTimeout(completionTimeout);
         adapter.setConverter(new DefaultPahoMessageConverter());
         adapter.setQos(1);

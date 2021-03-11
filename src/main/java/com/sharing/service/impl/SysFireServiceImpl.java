@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author lfh
- * @since 2020-06-01
+ * @since 2021-03-11
  */
 @Service
 public class SysFireServiceImpl extends ServiceImpl<SysFireDao, SysFire> implements ISysFireService {

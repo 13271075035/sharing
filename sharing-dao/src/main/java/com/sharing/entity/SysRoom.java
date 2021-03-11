@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author lfh
- * @since 2020-05-26
+ * @since 2020-06-12
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -66,6 +66,9 @@ public class SysRoom extends Model<SysRoom> {
     @TableField("VR")
     private Integer vr;
 
+    @ApiModelProperty(value = "房间具体地址")
+    private String sysRoomAddress;
+
 
     public static final String SYS_ROOMID = "sys_roomId";
 
@@ -88,6 +91,8 @@ public class SysRoom extends Model<SysRoom> {
     public static final String SYS_SHOPID = "sys_shopId";
 
     public static final String VR = "VR";
+
+    public static final String SYS_ROOM_ADDRESS = "sys_room_address";
 
     @Override
     protected Serializable pkVal() {

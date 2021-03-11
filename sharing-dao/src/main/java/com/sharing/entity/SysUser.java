@@ -60,6 +60,7 @@ public class SysUser extends Model<SysUser> {
     private String spareTwo;
 
 
+
     public static final String SYS_USERID = "sys_userId";
 
     public static final String SYS_USERNAME = "sys_userName";

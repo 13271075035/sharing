@@ -34,5 +34,14 @@ public class SysRoomController {
         query.lambda().eq(SysRoom::getSysShopid,room.getSysShopid());
         return  new WebResult().ok(impl.list(query));
     }
+    @RequestMapping("/addRoom")
+    public WebResult addRoom(@RequestBody SysRoom room){
+        return new WebResult().ok(impl.save(room));
+    }
+
+    @RequestMapping("/deleteRoom")
+    public WebResult deleteRoom(@RequestBody SysRoom room){
+        return new WebResult().ok(impl.removeById(room.getSysRoomid()));
+    }
 }
 
