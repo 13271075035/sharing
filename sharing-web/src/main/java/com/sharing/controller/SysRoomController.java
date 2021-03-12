@@ -2,6 +2,7 @@ package com.sharing.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sharing.RabbitMQ.MqttReceiveConfig;
 import com.sharing.common.entity.WebResult;
 import com.sharing.entity.SysRoom;
 import com.sharing.service.impl.SysRoomServiceImpl;
@@ -27,6 +28,8 @@ public class SysRoomController {
 
     @Autowired
     private SysRoomServiceImpl impl ;
+
+    private MqttReceiveConfig config;
     @RequestMapping("/room")
     public WebResult room(@RequestBody SysRoom room){
         System.out.println(room.getSysShopid());
@@ -36,11 +39,13 @@ public class SysRoomController {
     }
     @RequestMapping("/addRoom")
     public WebResult addRoom(@RequestBody SysRoom room){
+        config.adapter.addTopic(room.getSpareFirst(),1);
         return new WebResult().ok(impl.save(room));
     }
 
     @RequestMapping("/deleteRoom")
     public WebResult deleteRoom(@RequestBody SysRoom room){
+        config.adapter.removeTopic(room.getSpareFirst());
         return new WebResult().ok(impl.removeById(room.getSysRoomid()));
     }
 }

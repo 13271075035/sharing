@@ -120,7 +120,7 @@ public class MqttReceiveConfig {
         // 动态topic
         List<SysFire> list = impl.list();
         adapter = new MqttPahoMessageDrivenChannelAdapter(clientId + "_inbound", mqttClientFactory(),"");
-
+        System.out.println(list);
         for(SysFire topic:list){
                 adapter.addTopic(topic.getSysEquipmentName(),1);
         }
